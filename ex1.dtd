@@ -1,0 +1,21 @@
+<!ELEMENT Hogwarts (Rooms, Teachers, Courses)>
+<!ELEMENT Rooms (Room)+>
+<!ELEMENT Room (EMPTY)>
+<!ATTLIST Room name ID #REQUIRED 
+					seats CDATA #IMPLIED>
+<!ELEMENT Teachers (Teacher)+>
+<!ELEMENT Teacher (Title)*>
+<!ATTLIST Teacher name ID #REQUIRED
+				room IDREF #REQUIRED>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Courses (Course)+>
+<!ELEMENT Course (Class)*>
+<!ATTLIST Course name ID #REQUIRED
+				teachers IDREFS #REQUIRED>
+<!ELEMENT Class (EMPTY)>
+<!ATTLIST Class day CDATA #REQUIRED
+		hour CDATA #REQUIRED>	
+
+
+
+
